@@ -1,0 +1,42 @@
+{
+    "name": "{{#scoped}}@{{owner}}/{{/scoped}}{{name}}",
+    "version": "{{version}}",
+    "description": "{{description}}",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+      "clean": "npm run clean:dist && npm run clean:coverage",
+      "compile": "tsc --skipLibCheck",
+      "compile:watch": "tsc --skipLibCheck --watch",
+      "lint": "tslint \"src/**/*.ts*\" --force",
+      "prepublish": "npm run clean && npm run lint && npm run compile"
+    },
+    "ava": {
+      "files": [
+        "test/index.js"
+      ]
+    },
+    "bugs": {
+      "url": "https://github.com/{{owner}}/{{name}}/issues"
+    },
+    "license": "MIT",
+    "author": {
+      "name": "{{author}}",
+      "email": "{{email}}"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/{{owner}}/{{name}}.git"
+    },
+    "keywords": [],
+      "dependencies": {},
+    "devDependencies": {
+      "ava": "^0.18.2",
+      "ava-spec": "^1.1.0",
+      "nyc": "^10.1.2",
+      "rimraf": "^2.6.0",
+      "tslint": "^4.4.2",
+      "typescript": "~2.2.0"
+    }
+  }
+  
