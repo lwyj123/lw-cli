@@ -36,10 +36,10 @@ program.on('--help', () => {
   console.log('  Examples:')
   console.log()
   console.log(chalk.gray('    # create a new project with an official template'))
-  console.log('    $ vue init webpack my-project')
+  console.log('    $ lw init webpack my-project')
   console.log()
   console.log(chalk.gray('    # create a new project straight from a github template'))
-  console.log('    $ vue init username/repo my-project')
+  console.log('    $ lw init username/repo my-project')
   console.log()
 })
 
@@ -65,6 +65,7 @@ const name = inPlace ? path.relative('../', process.cwd()) : rawName
 const to = path.resolve(rawName || '.')
 const clone = program.clone || false
 
+// cache
 const tmp = path.join(home, '.vue-templates', template.replace(/[\/:]/g, '-'))
 if (program.offline) {
   console.log(`> Use cached template at ${chalk.yellow(tildify(tmp))}`)
