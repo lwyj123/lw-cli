@@ -1,28 +1,31 @@
 {
   "name": "lw-cli",
-  "version": "2.9.3",
-  "description": "A simple CLI for scaffolding Vue.js projects.",
+  "version": "0.0.1",
+  "description": "A simple CLI for lwyj123 based on vue-cli",
   "preferGlobal": true,
   "bin": {
     "vue": "bin/vue",
-    "vue-init": "bin/vue-init",
-    "vue-list": "bin/vue-list"
+    "vue-init": "bin/vue-init"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/vue-cli.git"
+    "url": "git+https://github.com/lwyj123/lw-cli.git"
   },
   "keywords": [
     "vue",
     "cli",
-    "spa"
+    "template"
   ],
-  "author": "Evan You",
+  "author": {
+    "name": "lwyj123",
+    "email": "443474713@qq.com",
+    "url": "http://lwio.me/"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vuejs/vue-cli/issues"
+    "url": "https://github.com/lwyj123/lw-cli/issues"
   },
-  "homepage": "https://github.com/vuejs/vue-cli#readme",
+  "homepage": "https://github.com/lwyj123/lw-cli#readme",
   "scripts": {
     "test": "npm run lint && npm run e2e",
     "lint": "eslint test/e2e/test*.js lib bin/* --env mocha",
