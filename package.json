@@ -1,11 +1,11 @@
 {
   "name": "lw-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple CLI for lwyj123 based on vue-cli",
   "preferGlobal": true,
   "bin": {
-    "vue": "bin/lw",
-    "vue-init": "bin/vue-init"
+    "lw": "bin/lw",
+    "lw-init": "bin/lw-init"
   },
   "repository": {
     "type": "git",
