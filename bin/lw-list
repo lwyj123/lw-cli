@@ -18,9 +18,9 @@ process.on('exit', () => {
  */
 
 request({
-  url: 'https://api.github.com/users/vuejs-templates/repos',
+  url: 'https://api.github.com/users/lwyj123/repos',
   headers: {
-    'User-Agent': 'vue-cli'
+    'User-Agent': 'lw-cli'
   }
 }, (err, res, body) => {
   if (err) logger.fatal(err)
@@ -29,6 +29,9 @@ request({
     console.log('  Available official templates:')
     console.log()
     requestBody.forEach(repo => {
+      if(repo.name.indexOf('template') === -1) {
+        continue
+      }
       console.log(
         '  ' + chalk.yellow('★') +
         '  ' + chalk.blue(repo.name) +
