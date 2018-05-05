@@ -1,6 +1,6 @@
 {
   "name": "lw-cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A simple CLI for lwyj123 based on vue-cli",
   "preferGlobal": true,
   "bin": {
