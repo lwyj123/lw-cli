@@ -18,20 +18,17 @@ process.on('exit', () => {
  */
 
 request({
-  url: 'https://api.github.com/users/lwyj123/repos',
+  url: 'https://api.github.com/search/repositories?q=user:lwyj123 template+in:name',
   headers: {
     'User-Agent': 'lw-cli'
   }
 }, (err, res, body) => {
   if (err) logger.fatal(err)
-  const requestBody = JSON.parse(body)
-  if (Array.isArray(requestBody)) {
+  const { items } = JSON.parse(body)
+  if (Array.isArray(items)) {
     console.log('  Available official templates:')
     console.log()
-    requestBody.forEach(repo => {
-      if(repo.name.indexOf('template') === -1) {
-        continue
-      }
+    items.forEach(repo => {
       console.log(
         '  ' + chalk.yellow('★') +
         '  ' + chalk.blue(repo.name) +
